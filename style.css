@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    min-height: 100vh;
+    max-width: 1300px;
+    padding: 1rem .75rem;
+    margin-inline: auto;
+    position: relative;
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    pointer-events: none;
+    height: 100vh;
+    z-index: 8;
+    background: #000000ab;
+}
+.show-overlay{
+    transform: scale(1);
+}
+.heading{
+    font-size: 15rem;
+    opacity: .2;
+    color: #0b0b0b;
+    position: fixed;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -5px;
+    pointer-events: none;
+    z-index: 1;
+}
+.notes{
+    width: 310px;
+    background: #970026;
+    min-height: 40vh;
+    padding: 1rem;
+    z-index: 3;
+    border-radius: 5px;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+}
+.make-notes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 40vh;
+    cursor: pointer;
+    background: #323232;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 7;
+}
+.ri-file-list-2-line{
+    padding-right: .5rem;
+}
+.notes-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.ri-add-line{
+    font-size: 5rem;
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-block: 2rem;
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    background: #7B68EE;
+    cursor: pointer;
+}
+.input-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+.input-box{
+    background: #7B68EE;
+    width: 400px;
+    min-height: 40vh;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 1.5rem 1rem;
+    transform: scale(2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease;
+}
+.show-input{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+.notes-title{
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #ffffff7c;
+}
+.notes-content{
+    font-size: .9rem;
+    padding-block: 1rem;
+    text-align: justify;
+    padding-bottom: .8rem;
+    border-bottom: 2px solid #ffffff7c;
+    height: 21vh;
+    overflow-y: auto;
+}
+.notes-content::-webkit-scrollbar{
+    display: none;
+}
+.ri-eye-line{
+    color: #f9ff44;
+}
+.ri-delete-bin-line{
+    color: #ff6262;
+}
+.ri-edit-line{
+    color: #0fd85c;
+}
+#edit-icon, #delete-icon{
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #13131394;
+    cursor: pointer;
+    font-weight: 700;
+}
+.input-heading{
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ffffff5c;
+    padding-bottom: .5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.notes-buttons{
+    background: #1e1e1e4a;
+    padding: .5rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+}
+.input-group input{
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 5px;
+}
+.input-group textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 5px;
+}
+.input-btn{
+    background: hsl(0, 0%, 17%);
+    color: #fff;
+    margin-top: 1rem;
+}
+.ri-close-line{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+.label{
+    font-size: 1rem;
+    padding-block: .2rem;
+    opacity: .7;
+}
+.notes-action{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App | Javascript Project</title>
+
+    <!-- Link Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <h1 class="heading">MyDocs</h1>
+        <div class="notes-container">
+            <div class="make-notes">
+                <i class="ri-add-line"></i>
+                <button class="btn" id="add-btn">Add</button>
+            </div>
+        </div>
+        <div class="input-popup">
+            <div class="input-box" id="input-box">
+                <h2 class="input-heading">Add Notes</h2>
+                <i class="ri-close-line" id="input-close"></i>
+                <div class="input-group">
+                    <span class="label">Title</span>
+                    <input type="text" id="title" class="input-field" placeholder="Enter Title...">
+                </div>
+                <div class="input-group">
+                    <span class="label">Description</span>
+                    <textarea id="description" placeholder="Enter Description..." rows="6"></textarea>
+                </div>
+                <button class="btn input-btn" id="addNotes-btn">Add</button>
+            </div>
+        </div>
+    </div>
+    <!-- Link Custom JS File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
